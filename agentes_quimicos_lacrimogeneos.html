@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentes Lacrimogêneos | Unidade Policial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 80px 0;
+    }
+    .navbar {
+      background-color: #104E8B;
+    }
+    .navbar a {
+      color: #ffffff !important;
+    }
+    .navbar .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid #ffffff;
+    }
+    .hero {
+      background: linear-gradient(#135ea8, #1E90FF), url('https://via.placeholder.com/1600x500') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #0f0f1a;
+      color: #ccc;
+    }
+    .list-group-item a {
+      text-decoration: none;
+      color: #0d6efd;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #104E8B;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -50px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 3px solid #104E8B;
+    }
+    .compound-card {
+      cursor: pointer;
+      border-left: 4px solid #104E8B;
+    }
+    .compound-card:hover {
+      border-left-color: #1E90FF;
+    }
+    .technique-card.active {
+      box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.5);
+    }
+    .compound-details {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-shield-shaded me-2"></i>
+        <span class="fw-bold">Unidade Policial</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-arrow-left me-1"></i> Voltar ao Início</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <h1>Agentes Químicos Lacrimogêneos</h1>
+      <p class="lead">Uso tático, composição e protocolos conforme Portaria 855/2025</p>
+    </div>
+  </header>
+
+  <!-- Definição -->
+  <section id="definicao">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card shadow-sm mb-5">
+            <div class="card-body">
+              <h2 class="section-title">O Que São Agentes Lacrimogêneos?</h2>
+              <p>Agentes químicos lacrimogêneos são substâncias desenvolvidas com o propósito de debilitar temporariamente indivíduos 
+                por meio da irritação das mucosas e da pele. Seus efeitos são imediatos após a exposição, provocando ardência ocular, 
+                lacrimejamento intenso, desconforto respiratório e sensação de queimação na pele.
+              <p>Tais agentes atuam diretamente sobre os receptores sensoriais nervosos das mucosas e epiderme, provocando dor e desconforto 
+                de forma controlada e reversível. Após cessada a exposição, os sintomas desaparecem em breve intervalo de tempo, caracterizando-os
+                como instrumentos de menor potencial ofensivo com aplicação tática em situações de controle de distúrbios civis.</p>
+              
+              <div class="alert alert-primary mt-4">
+                <h5><i class="bi bi-file-earmark-text me-2"></i> <a href="https://www.planalto.gov.br/ccivil_03/decreto/d2977.htm " target="_blank">Art. II nº 7 do Decreto nº 2.977 de 1 de março de 1999</a></h5>
+                <p class="mb-0">Qualquer substância química que possa rapidamente produzir nos seres humanos 
+                                irritação sensorial ou efeitos incapacitantes físicos, que em pouco tempo desaparecem após concluída à 
+                                exposição ao agente. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Histórico -->
+  <section id="historico" class="bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">Evolução Histórica</h2>
+      <div class="timeline mt-4">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <h3>1914 - Primeiro Uso Militar</h3>
+          <p>França utiliza brometo de xilil em granadas durante a 1ª Guerra Mundial.</p>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <h3>1950s - Adoção Policial</h3>
+          <p>EUA e Reino Unido passam a usar CS em controle de distúrbios civis.</p>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <h3>1960s - Aprimoramentos</h3>
+          <p>Desenvolvimento de formulações mais seguras e dispositivos de dispersão.</p>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="timeline-item">
+          <h3>1990s - OC (Spray de Pimenta)</h3>
+          <p>Popularização do oleoresina de capsicum como alternativa menos tóxica.</p>
+        </div>
+        
+        <!-- Item 5 -->
+        <div class="timeline-item">
+          <h3>2025 - Portaria 855</h3>
+          <p>Regulamentação específica para uso policial no Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de Compostos -->
+  <section id="compostos" class="bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">Principais Compostos</h2>
+      <div class="row g-4">
+        <!-- CS -->
+        <div class="col-md-6">
+          <div class="card compound-card shadow-sm h-100" onclick="toggleDetails('cs')">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-droplet text-primary fs-4"></i>
+                </div>
+                <h3 class="card-title mb-0">CS (Clorobenzilideno Malononitrilo)</h3>
+              </div>
+              <ul class="list-unstyled">
+                <li><strong>Efeito:</strong> Irritação intensa em 20-60 segundos</li>
+                <li><strong>Duração:</strong> 30-60 minutos</li>
+                <li><strong>Concentração Eficaz:</strong> 0,004 mg/m³</li>
+              </ul>
+            </div>
+          </div>
+          <div id="cs-details" class="compound-details card shadow-sm mt-3">
+            <div class="card-body">
+              <h5><i class="bi bi-info-circle text-primary me-2"></i>Detalhes sobre o CS</h5>
+              <ul>
+                <li>Desenvolvido em 1928 por Corson e Stoughton (EUA)</li>
+                <li>Não inflamável, eficaz em baixas concentrações</li>
+                <li><strong>Características:</strong> Pó branco, odor de pimenta</li>
+                <li><strong>Cuidados:</strong> Evitar uso prolongado em ambientes fechados</li>
+              </ul>
+              <button class="btn btn-sm btn-outline-primary" onclick="toggleDetails('cs')">Fechar</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- OC -->
+        <div class="col-md-6">
+          <div class="card compound-card shadow-sm h-100" onclick="toggleDetails('oc')">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-pepper text-primary fs-4"></i>
+                </div>
+                <h3 class="card-title mb-0">OC (Oleoresina de Capsicum)</h3>
+              </div>
+              <ul class="list-unstyled">
+                <li><strong>Efeito:</strong> Ardência imediata</li>
+                <li><strong>Duração:</strong> 45-90 minutos</li>
+                <li><strong>Concentração:</strong> 1-3% de capsaicina</li>
+              </ul>
+            </div>
+          </div>
+          <div id="oc-details" class="compound-details card shadow-sm mt-3">
+            <div class="card-body">
+              <h5><i class="bi bi-info-circle text-primary me-2"></i>Detalhes sobre o OC</h5>
+              <ul>
+                <li>Extraído de pimentas do gênero Capsicum</li>
+                <li>Provoca vasodilatação e dor temporária</li>
+                <li><strong>Vantagem:</strong> Efeito mesmo em indivíduos sob efeito de drogas</li>
+                <li><strong>Limitações:</strong> Menos eficaz em ambientes com vento forte</li>
+              </ul>
+              <button class="btn btn-sm btn-outline-primary" onclick="toggleDetails('oc')">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Técnicas de Uso -->
+  <section id="tecnicas">
+    <div class="container">
+      <h2 class="section-title text-center">Técnicas de Emprego Tático</h2>
+      <div class="row g-4">
+        <!-- Técnica 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card technique-card shadow-sm h-100" id="vento-card" onclick="showTechnique('vento')">
+            <div class="card-body text-center">
+              <i class="bi bi-wind text-primary fs-1 mb-3"></i>
+              <h5 class="card-title">Consideração do Vento</h5>
+              <p class="card-text">Posicionamento a favor do vento para evitar contaminação da tropa.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Técnica 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card technique-card shadow-sm h-100" id="dose-card" onclick="showTechnique('dose')">
+            <div class="card-body text-center">
+              <i class="bi bi-speedometer2 text-primary fs-1 mb-3"></i>
+              <h5 class="card-title">Dosagem Progressiva</h5>
+              <p class="card-text">Uso inicial em rajadas curtas (1-2 segundos) para avaliação de efeito.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Técnica 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card technique-card shadow-sm h-100" id="alvo-card" onclick="showTechnique('alvo')">
+            <div class="card-body text-center">
+              <i class="bi bi-bullseye text-primary fs-1 mb-3"></i>
+              <h5 class="card-title">Áreas de Aplicação</h5>
+              <p class="card-text">Foco no rosto (olhos e região nasal) para máxima eficácia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demonstração da Técnica -->
+      <div class="card shadow-sm mt-5">
+        <div class="card-body">
+          <div id="technique-demo">
+            <div id="vento-demo" class="technique-demo">
+              <h4><i class="bi bi-wind me-2"></i>Posicionamento em Relação ao Vento</h4>
+              <img src="https://via.placeholder.com/800x300?text=Diagrama+de+Direção+do+Vento" alt="Direção do vento" class="img-fluid rounded mb-3">
+              <p><strong>Melhor posição:</strong> 45° a favor do vento, distância mínima de 3m.</p>
+              <p><strong>Erro comum:</strong> Posicionamento contra o vento causa contaminação da equipe.</p>
+            </div>
+            
+            <div id="dose-demo" class="technique-demo">
+              <h4><i class="bi bi-speedometer2 me-2"></i>Protocolo de Dosagem</h4>
+              <div class="progress mb-3" style="height: 30px;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;">Dose Inicial (25%)</div>
+              </div>
+              <p><strong>Sequência recomendada:</strong></p>
+              <ol>
+                <li>1ª aplicação (1-2 segundos)</li>
+                <li>Avaliação de efeito (15 segundos)</li>
+                <li>Reaplicação se necessário (máximo 3 ciclos)</li>
+              </ol>
+            </div>
+            
+            <div id="alvo-demo" class="technique-demo">
+              <h4><i class="bi bi-bullseye me-2"></i>Áreas de Aplicação Eficaz</h4>
+              <img src="https://via.placeholder.com/600x300?text=Diagrama+de+Áreas+de+Aplicação" alt="Áreas de aplicação" class="img-fluid rounded mb-3">
+              <p><strong>Áreas prioritárias:</strong></p>
+              <ul>
+                <li>Olhos (provoca fechamento involuntário das pálpebras)</li>
+                <li>Nariz (causa dificuldade respiratória temporária)</li>
+                <li>Boca (induz tosse e dificuldade de fala)</li>
+              </ul>
+            </div>
+            
+            <div id="default-demo" class="text-center py-4">
+              <p class="text-muted"><i class="bi bi-mouse2 me-2"></i>Selecione uma técnica acima para visualizar detalhes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protocolos de Segurança -->
+  <section id="seguranca">
+    <div class="container">
+      <h2 class="section-title text-center">Protocolos de Segurança</h2>
+      <div class="row g-4">
+        <!-- Primeiros Socorros -->
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="card-title"><i class="bi bi-heart-pulse text-danger me-2"></i>Primeiros Socorros</h3>
+              <ol class="mt-3">
+                <li>Remover a vítima da área contaminada</li>
+                <li>Lavar os olhos com água limpa por 15 minutos</li>
+                <li>Remover roupas contaminadas</li>
+                <li>Não esfregar os olhos ou pele</li>
+                <li>Usar ventilação para dispersar resíduos</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contraindicações -->
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="card-title"><i class="bi bi-exclamation-triangle text-warning me-2"></i>Contraindicações</h3>
+              <div class="alert alert-warning mt-3">
+                <strong>Não utilizar em:</strong>
+              </div>
+              <ul>
+                <li>Espaços confinados sem ventilação</li>
+                <li>Indivíduos com asma grave</li>
+                <li>Pessoas com glaucoma</li>
+                <li>Gestantes (exceto em risco iminente)</li>
+                <li>Crianças menores de 12 anos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <small>&copy; 2025 Unidade Policial. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Scripts Interativos -->
+  <script>
+    // Mostrar/ocultar detalhes dos compostos
+    function toggleDetails(compound) {
+      const element = document.getElementById(compound + '-details');
+      element.style.display = element.style.display === 'block' ? 'none' : 'block';
+    }
+    
+    // Mostrar técnica selecionada
+    function showTechnique(technique) {
+      // Reset all
+      document.querySelectorAll('.technique-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      document.querySelectorAll('.technique-demo').forEach(demo => {
+        demo.style.display = 'none';
+      });
+      document.getElementById('default-demo').style.display = 'none';
+      
+      // Ativar selecionada
+      document.getElementById(technique + '-card').classList.add('active');
+      document.getElementById(technique + '-demo').style.display = 'block';
+    }
+    
+    // Inicializar com primeira técnica
+    document.addEventListener('DOMContentLoaded', function() {
+      showTechnique('vento');
+    });
+  </script>
+</body>
+</html>
